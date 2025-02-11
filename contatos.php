@@ -1,32 +1,50 @@
 <?php
 $dados= [
-    'nome'=> 'Luiz',
-    'nasc' => '14/05/2010',
+    'Pessoa'=>
+    [
+    'Nome: '=> 'Luiz',
+    'Nascimento: ' => '14/05/2010'
+    ],
     'documentos'=> [
-        'ID'=> '1',
-        'CPF'=>'32.867.432-78',
-        'CNH'=>'63265874358'
+        'ID: '=> '1',
+        'CPF: '=>'32.867.432-78',
+        'CNH: '=>'63265874358'
     ],
     'endereco' => [
-        'tipo'=>'casa',
-        'logradouro'=>'Rua ',
-        'num'=>'802',
-        'complemento'=>'Padaria do seu zé',
-        'bairro'=>'Maria das dores',
-        'cidade' => 'valenca',
-        'UF' =>'RJ',
-        'CEP'=> '27600742'
+        'Tipo: '=>'Casa',
+        'Logradouro: '=>'Rua ',
+        'Num: '=>'802',
+        'Complemento: '=>'Padaria do seu zé',
+        'Bairro: '=>'Maria das dores',
+        'Cidade: ' => 'Valença',
+        'UF: ' =>'RJ',
+        'CEP: '=> '27600742'
     ],
     'filiacao'=> [
-        'nomepai'=>'Ricardo',
-        'nomemae'=> 'Helena'
+        'Nome pai: '=>'Ricardo',
+        'Nome mãe: '=> 'Helena'
     ],
     'contatos'=> [
-        'celular'=> '24780453267',
-        'fixo'=>'2424538954',
-        'email'=> 'luizao@gmail.com'
+        'Celular: '=> '24780453267',
+        'Fixo: '=>'2424538954',
+        'Email: '=> 'luizao@gmail.com'
     ]
-]
+];
+foreach($dados['Pessoa'] as $pessoa => $value){
+    echo $pessoa . $value . "<br>";
+}
+foreach($dados['documentos'] as $documento => $value){
+    echo $documento . $value . "<br>";
+}
+echo "<br>";
+foreach($dados['endereco'] as $enderec => $value){
+         echo $enderec . $value . "<br>";
+     }
+echo "<br>";
+     foreach($dados['filiacao'] as $filiaca => $value){
+        echo $filiaca . $value . "<br>";
+    }
+    echo "<br>";
 foreach($dados['contatos'] as $contato => $value){
     echo $contato . $value . "<br>";
 }
